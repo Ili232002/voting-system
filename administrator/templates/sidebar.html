@@ -9,7 +9,7 @@
       </div>
       <div class="pull-left info">
         <p>{{ request.user }}</p>
-        <a><i class="fa fa-circle text-success"></i> Online</a>
+        <a><i class="fa fa-circle text-success"></i> В сети</a>
       </div>
     </div>
     <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -17,21 +17,21 @@
       {% if request.user.user_type == '1' %}
   
       
-      <li class="header">REPORTS</li>
-      <li class=""><a href="{% url 'adminDashboard' %}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-      <li class=""><a href="{% url 'viewVotes' %}"><span class="glyphicon glyphicon-lock"></span> <span>Votes</span></a></li>
-      <li class="header">MANAGE</li>
-      <li class=""><a href="{% url 'adminViewVoters' %}"><i class="fa fa-users"></i> <span>Voters</span></a></li>
-      <li class=""><a href="{% url 'viewPositions' %}"><i class="fa fa-tasks"></i> <span>Positions</span></a></li>
-      <li class=""><a href="{% url 'viewCandidates' %}"><i class="fa fa-black-tie"></i> <span>Candidates</span></a></li>
-      <li class="header">SETTINGS</li>
-      <li class=""><a href="{% url 'ballot_position' %}"><i class="fa fa-file-text"></i> <span>Ballot Position</span></a></li>
-      <li class=""><a href="#config" data-toggle="modal"><i class="fa fa-cog"></i> <span>Election Title</span></a></li>
+      <li class="header">ОТЧЁТЫ</li>
+      <li class=""><a href="{% url 'adminDashboard' %}"><i class="fa fa-dashboard"></i> <span>Панель</span></a></li>
+      <li class=""><a href="{% url 'viewVotes' %}"><span class="glyphicon glyphicon-lock"></span> <span>Голосование</span></a></li>
+      <li class="header">УПРАВЛЕНИЕ</li>
+      <li class=""><a href="{% url 'adminViewVoters' %}"><i class="fa fa-users"></i> <span>Избиратели</span></a></li>
+      <li class=""><a href="{% url 'viewPositions' %}"><i class="fa fa-tasks"></i> <span>Должности</span></a></li>
+      <li class=""><a href="{% url 'viewCandidates' %}"><i class="fa fa-black-tie"></i> <span>Кандидаты</span></a></li>
+      <li class="header">НАСТРОЙКИ</li>
+      <li class=""><a href="{% url 'ballot_position' %}"><i class="fa fa-file-text"></i> <span>Позиция голосования</span></a></li>
+      <li class=""><a href="#config" data-toggle="modal"><i class="fa fa-cog"></i> <span>Предвыборное название</span></a></li>
             
       {% endif %}
         
-      <li class="header">Exit</li>
-      <li class=""><a href="{% url 'account_logout' %}"><i class="fa fa-arrow-left"></i> <span>Logout</span></a></li>
+
+      <li class=""><a href="{% url 'account_logout' %}"><i class="fa fa-arrow-left"></i> <span>Выйти</span></a></li>
 
     </ul>
   </section>
