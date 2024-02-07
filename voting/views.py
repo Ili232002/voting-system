@@ -123,7 +123,7 @@ def dashboard(request):
 
 def verify(request):
     context = {
-        'page_title': 'OTP Verification'
+        'page_title': 'Проверка Кода'
     }
     return render(request, "voting/voter/verify.html", context)
 

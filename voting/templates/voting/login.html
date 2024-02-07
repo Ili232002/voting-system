@@ -3,11 +3,11 @@
 
     <div class="login-box">
         <div class="login-logo">
-            <b>Voting System</b>
+            <b>Сисема голосования</b>
         </div>
 
         <div class="login-box-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+            <p class="login-box-msg">Войдите в систему</p>
 
             <form action="{% url 'account_login' %}" method="POST">
                 {% csrf_token %}
@@ -22,15 +22,17 @@
                 <div class="row">
                     <div class="col-xs-4">
                         <button type="submit" class="btn btn-primary btn-block btn-flat" name="login"><i
-                                class="fa fa-sign-in"></i> Sign In</button>
+                                class="fa fa-sign-in"></i> Войти
+                        </button>
                     </div>
                     <div class="pull-right col-xs-4">
-                        <a  class="btn btn-primary btn-block btn-flat" href="{% url 'account_register' %}"><i class="fa fa-upload"></i> Register</a>
+                        <a class="btn btn-primary btn-block btn-flat" href="{% url 'account_register' %}"><i
+                                class="fa fa-upload"></i> Register</a>
                     </div>
                 </div>
             </form>
         </div>
-            </div>
+    </div>
 
- 
+
 {% endblock content %} 

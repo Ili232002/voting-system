@@ -118,7 +118,7 @@ def dashboard(request):
         'voted_voters_count': voted_voters.count(),
         'positions': positions,
         'chart_data': chart_data,
-        'page_title': "Dashboard"
+        'page_title': "Главная панель"
     }
     return render(request, "admin/home.html", context)
 
@@ -131,7 +131,7 @@ def voters(request):
         'form1': userForm,
         'form2': voterForm,
         'voters': voters,
-        'page_title': 'Voters List'
+        'page_title': 'Список Избирателей'
     }
     if request.method == 'POST':
         if userForm.is_valid() and voterForm.is_valid():
@@ -259,7 +259,7 @@ def viewCandidates(request):
     context = {
         'candidates': candidates,
         'form1': form,
-        'page_title': 'Candidates'
+        'page_title': 'Кандидаты'
     }
     if request.method == 'POST':
         if form.is_valid():
@@ -381,7 +381,7 @@ def viewVotes(request):
     votes = Votes.objects.all()
     context = {
         'votes': votes,
-        'page_title': 'Votes'
+        'page_title': 'Голоса'
     }
     return render(request, "admin/votes.html", context)
 
